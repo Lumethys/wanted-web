@@ -2,9 +2,6 @@
   <div class="flex flex-col items-center justify-center gap-4 h-screen">
     <h1 class="font-bold text-2xl text-(--ui-primary)">
       Nuxt UI - Starter
-      <UIcon name="i-lucide-lightbulb" class="size-5" />
-      <ColorSwitcherButton />
-      <LanguageSwitcherButton />
     </h1>
 
     <div class="flex items-center gap-2">

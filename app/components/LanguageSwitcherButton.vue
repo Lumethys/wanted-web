@@ -1,15 +1,21 @@
 <script setup lang="ts">
-const { locale, locales } = useI18n();
+import type {Locale} from "vue-i18n";
 
-const items = computed(() => locales.value.map((availableLocale) => availableLocale.name ?? ''));
+const { locale, locales, setLocale } = useI18n()
+
+const localeOptions = computed(() => locales.value.map((item) => ({
+  label: item.name,
+  value: item.code,
+})))
+
+const currentLocale = computed({
+  get: () => locale.value,
+  set: (value: Locale): void => {
+    setLocale(value);
+  },
+});
 </script>
 
 <template>
-  <USelect v-model="locale" :items="items"/>
-<!--  <SwitchLocalePathLink locale="vi">Tiếng Việt</SwitchLocalePathLink>-->
-<!--  <SwitchLocalePathLink locale="en">English</SwitchLocalePathLink>-->
+  <USelect v-model="currentLocale" :items="localeOptions" />
 </template>
-
-<style scoped>
-
-</style>
