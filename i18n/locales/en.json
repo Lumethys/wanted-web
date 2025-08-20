@@ -1,5 +1,11 @@
 {
   "landing_page": {
-    "wanted_board": "Wanted Board"
+    "wanted_board": "Wanted Board",
+    "wanted_title": "Wanted",
+    "wanted_type": {
+      "alive": "Alive Only",
+      "dead": "Dead Only",
+      "dead_or_alive": "Dead or Alive"
+    }
   }
 }

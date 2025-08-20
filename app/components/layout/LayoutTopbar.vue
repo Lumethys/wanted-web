@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import LanguageSwitcherButton from "~/components/LanguageSwitcherButton.vue";
-import ColorSwitcherButton from "~/components/ColorSwitcherButton.vue";
-
 const { t } = useI18n()
 
 // const open = ref<boolean>(false)
