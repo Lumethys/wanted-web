@@ -2,10 +2,14 @@
   "landing_page": {
     "wanted_board": "Bảng Truy Nã",
     "wanted_title": "Truy Nã",
+    "wanted_reward": "Phần thưởng",
+    "wanted_crimes": "Tội danh",
     "wanted_type": {
       "alive": "Chỉ bắt sống",
       "dead": "Giết chết",
       "dead_or_alive": "Bắt sống hoặc giết chết"
-    }
+    },
+    "name": "Tên",
+    "known_associates": "Đồng phạm"
   }
 }

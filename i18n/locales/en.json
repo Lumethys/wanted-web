@@ -2,10 +2,14 @@
   "landing_page": {
     "wanted_board": "Wanted Board",
     "wanted_title": "Wanted",
+    "wanted_reward": "Rewards",
+    "wanted_crimes": "Crimes",
     "wanted_type": {
       "alive": "Alive Only",
       "dead": "Dead Only",
       "dead_or_alive": "Dead or Alive"
-    }
+    },
+    "name": "Name",
+    "known_associates": "Known Associates"
   }
 }
