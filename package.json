@@ -19,7 +19,9 @@
     "@nuxt/ui": "^3.3.0",
     "@nuxtjs/i18n": "^10.0.5",
     "@unhead/vue": "^2.0.14",
-    "nuxt": "^4.0.3"
+    "@vueuse/nuxt": "^13.7.0",
+    "nuxt": "^4.0.3",
+    "vue": "^3.5.19"
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.8.0",

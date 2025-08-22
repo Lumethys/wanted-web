@@ -39,7 +39,7 @@ const turnToAbsolutePath = (path: string) => convertToAbsolutePath(path, url.ori
 </script>
 
 <template>
-  <div class="font-medieval relative py-4 pb-2 pt-4 bg-white dark:bg-gray-900 bg-center bg-size-[100%_100%] justify-center justify-items-center rounded-2xl">
+  <div class="font-medieval relative px-8 pb-2 pt-4 bg-white dark:bg-gray-900 bg-center bg-size-[100%_100%] justify-center justify-items-center">
     <h2 class="text-center text-5xl text-red-600 mb-5 font-bold">{{ t('landing_page.wanted_title') }}</h2>
     <h3 class="text-center text-4xl mb-5 font-bold">{{ rewardFormatted }}</h3>
     <NuxtImg :src="turnToAbsolutePath(imageSrc)" class="rounded-lg" alt="wanted-post" />

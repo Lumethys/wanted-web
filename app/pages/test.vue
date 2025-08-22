@@ -9,10 +9,10 @@ const { data: items } = useFetchWantedPosts();
         class="w-full max-w-5xl mx-auto"
         arrows
         :items="items"
-        :ui="{ item: 'basis-1/3' }"
+        :ui="{ item: 'basis-1/3', container: 'items-center' }"
         loop
     >
-      <WantedPanel
+      <WantedPosterBriefPanel
           v-bind="item"
           :class="(index % 2 === 0)
             ? 'bg-[url(/images/wanted-poster-background.png)]'
