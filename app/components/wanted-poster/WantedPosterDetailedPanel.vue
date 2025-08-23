@@ -42,12 +42,12 @@ const formatCrime = (type: CrimeType) => crimeMessageMap[type];
 </script>
 
 <template>
-  <div class="w-full p-10">
+  <div class="w-full p-16">
     <div class="w-full pt-4 pb-8 px-6 bg-[url(/images/modal_background.png)] bg-size-[100%_100%] justify-center justify-items-center">
       <h2 class="text-center text-5xl text-red-600 my-5 font-bold">{{ t('landing_page.wanted_title') }}</h2>
       <h3 class="text-center text-4xl text-neutral-700 mb-5 font-bold">{{ t('landing_page.wanted_reward').toLocaleUpperCase() }}: {{ rewardFormatted }}</h3>
       <h3 class="text-center text-4xl text-red-600 mb-5 font-bold">{{ wantedTypeFormatted }}</h3>
-      <div class="flex flex-row gap-4 mb-5">
+      <div class="flex flex-row gap-16 mb-5">
         <NuxtImg :src="imageSrc" class="rounded-lg min-w-64" alt="wanted-post" />
         <div class="my-5 text-black text-2xl">
           <h4 class="font-bold">{{ t('landing_page.name') }}: {{ criminalName }}</h4>
