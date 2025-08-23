@@ -2,7 +2,6 @@
 import type {Criminal} from "~/data/wanted-posts";
 
 const { t } = useI18n();
-const { getAbsoluteUrl } = useAbsoluteUrl();
 
 type Props = {
   accomplices: Criminal[]
@@ -32,7 +31,7 @@ const carouselUiConfig = computed(() => ({
     <div class="flex flex-col gap-4 mb-5">
       <h4 class="text-center text-3xl mt-5 font-bold text-black">{{ item.name.toUpperCase() }}</h4>
       <template v-if="item.imageSrc">
-        <NuxtImg :src="getAbsoluteUrl(item.imageSrc)" class="rounded-lg" alt="criminal-accomplice" />
+        <NuxtImg :src="item.imageSrc" class="rounded-lg" alt="criminal-accomplice" />
       </template>
     </div>
   </UCarousel>

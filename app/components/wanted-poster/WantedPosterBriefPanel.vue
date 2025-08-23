@@ -36,15 +36,13 @@ const wantedTypeMessageMap: Config<WantedType, string> = {
 };
 
 const wantedTypeFormatted = computed<string>(() => wantedTypeMessageMap[type]);
-
-const { getAbsoluteUrl } = useAbsoluteUrl();
 </script>
 
 <template>
   <div class="font-medieval relative bg-white dark:bg-gray-900 justify-center justify-items-center">
     <h2 class="text-center text-5xl text-red-600 mt-2 mb-5 font-bold">{{ t('landing_page.wanted_title') }}</h2>
     <h3 class="text-center text-4xl mb-5 font-bold">{{ rewardFormatted }}</h3>
-    <NuxtImg :src="getAbsoluteUrl(imageSrc)" class="rounded-lg" alt="wanted-post" />
+    <NuxtImg :src="imageSrc" class="rounded-lg" alt="wanted-post" />
     <h4 class="text-center text-3xl my-5 font-bold text-black dark:text-white">{{ name.toUpperCase() }}</h4>
     <h3 class="text-center text-4xl text-red-600 mb-5 font-bold">{{ wantedTypeFormatted.toUpperCase() }}</h3>
 

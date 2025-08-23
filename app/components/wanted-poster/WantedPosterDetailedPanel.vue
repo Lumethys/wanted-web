@@ -2,7 +2,6 @@
 import type {WantedEntry, WantedType} from "~/data/wanted-posts";
 
 const { t } = useI18n();
-const { getAbsoluteUrl } = useAbsoluteUrl();
 
 type Props = {
   data: WantedEntry
@@ -10,7 +9,7 @@ type Props = {
 
 const { data } = defineProps<Props>();
 
-const imageSrc = computed<string>(() => getAbsoluteUrl(data.wantedCriminal.imageSrc));
+const imageSrc = computed<string>(() => data.wantedCriminal.imageSrc);
 const criminalName = computed<string>(() => data.wantedCriminal.name.toUpperCase());
 
 const currencyTypeMessageMap: Config<CurrencyType, string> = {
