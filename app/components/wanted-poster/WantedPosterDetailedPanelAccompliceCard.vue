@@ -19,7 +19,7 @@ const carouselUiConfig = computed(() => ({
 </script>
 
 <template>
-  <h4 class="text-center text-3xl font-bold">{{ t('landing_page.known_associates') }}:</h4>
+  <h4 class="text-center text-3xl font-bold text-neutral-700">{{ t('landing_page.known_associates') }}:</h4>
   <UCarousel
       v-slot="{ item }"
       class="w-full max-w-5xl mx-auto"
@@ -30,7 +30,7 @@ const carouselUiConfig = computed(() => ({
       align="center"
   >
     <div class="flex flex-col gap-4 mb-5">
-      <h4 class="text-center text-3xl mt-5 font-bold text-black dark:text-white">{{ item.name.toUpperCase() }}</h4>
+      <h4 class="text-center text-3xl mt-5 font-bold text-black">{{ item.name.toUpperCase() }}</h4>
       <template v-if="item.imageSrc">
         <NuxtImg :src="getAbsoluteUrl(item.imageSrc)" class="rounded-lg" alt="criminal-accomplice" />
       </template>

@@ -1,10 +1,12 @@
 import {throwNuxtError} from "~/utils/throwNuxtError";
+import type {CrimeType, CurrencyType} from "#shared/types/wanted-model.d";
+import {Crime, Currency} from "#shared/utils/wanted-model";
 
 export type WantedType = 'dead' | 'alive' | 'both';
 
 export type Reward = {
     amount: number;
-    currency: string;
+    currency: CurrencyType;
 };
 
 export type Criminal = {
@@ -17,7 +19,7 @@ export type WantedEntry = {
     reward: Reward;
     wantedCriminal: Required<Criminal>;
     accomplices: Criminal[];
-    reasons: string[];
+    reasons: CrimeType[];
     type: WantedType;
 };
 
@@ -26,7 +28,7 @@ const data: WantedEntry[] = [
         id: 1,
         reward: {
             amount: 10000,
-            currency: 'silver coin',
+            currency: Currency.SILVER_COIN,
         },
         wantedCriminal: {
             name: 'John Doe',
@@ -40,56 +42,56 @@ const data: WantedEntry[] = [
                 name: 'Billy Doe',
             },
         ],
-        reasons: ['bank robbing', 'assault', 'battery'],
+        reasons: [Crime.BANK_ROBBING, Crime.ASSAULT, Crime.BATTERY],
         type: 'both',
     },
     {
         id: 2,
         reward: {
             amount: 9000,
-            currency: 'silver coin',
+            currency: Currency.SILVER_COIN,
         },
         wantedCriminal: {
             name: 'Marcus Langworth',
             imageSrc: 'images/criminal-2.png',
         },
         accomplices: [],
-        reasons: ['stealing', 'pickpocketing'],
+        reasons: [Crime.STEALING, Crime.PICKPOCKETING],
         type: 'both',
     },
     {
         id: 3,
         reward: {
             amount: 200,
-            currency: 'gold coin',
+            currency: Currency.GOLD_COIN,
         },
         wantedCriminal: {
             name: 'Wikazo Shifar',
             imageSrc: 'images/criminal-3.png',
         },
         accomplices: [],
-        reasons: ['murder', 'kidnapping'],
+        reasons: [Crime.MURDER, Crime.KIDNAPPING],
         type: 'alive',
     },
     {
         id: 4,
         reward: {
             amount: 700,
-            currency: 'gold coin',
+            currency: Currency.GOLD_COIN,
         },
         wantedCriminal: {
             name: 'Balara de Wulzic',
             imageSrc: 'images/criminal-7.png',
         },
         accomplices: [],
-        reasons: ['murder', 'kidnapping'],
+        reasons: [Crime.MURDER, Crime.KIDNAPPING],
         type: 'dead',
     },
     {
         id: 5,
         reward: {
             amount: 230,
-            currency: 'gold coin',
+            currency: Currency.GOLD_COIN,
         },
         wantedCriminal: {
             name: 'Wandi Wong',
@@ -105,21 +107,21 @@ const data: WantedEntry[] = [
                 imageSrc: 'images/criminal-6.png',
             },
         ],
-        reasons: ['murder', 'kidnapping'],
+        reasons: [Crime.MURDER, Crime.KIDNAPPING],
         type: 'alive',
     },
     {
         id: 6,
         reward: {
             amount: 2000,
-            currency: 'gold coin',
+            currency: Currency.GOLD_COIN,
         },
         wantedCriminal: {
             name: 'Williams "the Butcher" Song',
             imageSrc: 'images/criminal-9.png',
         },
         accomplices: [],
-        reasons: ['murder', 'kidnapping'],
+        reasons: [Crime.MURDER, Crime.KIDNAPPING],
         type: 'both',
     },
 ];

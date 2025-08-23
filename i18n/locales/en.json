@@ -11,5 +11,18 @@
     },
     "name": "Name",
     "known_associates": "Known Associates"
+  },
+  "currency": {
+    "gold_coin": "Gold Coin(s)",
+    "silver_coin": "Silver Coin(s)"
+  },
+  "crime": {
+    "bank_robbing": "Bank Robbing",
+    "assault": "Assault",
+    "battery": "Battery",
+    "stealing": "Stealing",
+    "pickpocketing": "Pickpocketing",
+    "murder": "Murder",
+    "kidnapping": "Kidnapping"
   }
 }

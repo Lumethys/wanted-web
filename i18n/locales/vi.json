@@ -11,5 +11,18 @@
     },
     "name": "Tên",
     "known_associates": "Đồng phạm"
+  },
+  "currency": {
+    "gold_coin": "Đồng vàng",
+    "silver_coin": "Đồng bạc"
+  },
+  "crime": {
+    "bank_robbing": "Cướp nhà băng",
+    "assault": "Hành hung",
+    "battery": "Bạo hành",
+    "stealing": "Trộm cắp",
+    "pickpocketing": "Móc túi",
+    "murder": "Giết người",
+    "kidnapping": "Bắt cóc"
   }
 }
